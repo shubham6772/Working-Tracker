@@ -1,0 +1,17 @@
+ <%- include("partials/header"); %>
+
+    <div style="margin-top: 20px">  
+     <a type="button" class="btn btn-primary" href="/compose" >Compose</a>
+    </div>
+        <%for(var i =0 ; i<posts.length; i++){%>
+           <%const title =  posts[i].title;%>
+           <%const capital = title.charAt(0).toUpperCase() + title.slice(1);%>
+        <div  style="background-color: #EDEDED; text-align: left; padding-left: 10px; " >
+            <h3><%= capital  %></h3>
+            <p><i><%=(posts[i].content).substring(0,20)+" ..."%></i> <a href="/posts/<%=title%>">Read More</a></p>  
+        </div>
+            <% } %>
+       
+        
+<%- include("partials/footer"); %>
+ 

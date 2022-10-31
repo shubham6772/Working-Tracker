@@ -1,0 +1,13 @@
+<%- include("partials/header"); %>
+
+
+          <%const title=postTitle;%>
+          <%const capital=title.charAt(0).toUpperCase() + title.slice(1);%>
+                <h1>
+                    <%=capital%>
+                </h1>
+                <p>
+                    <%=postContent%>
+                </p>
+            
+<%- include("partials/footer"); %>
